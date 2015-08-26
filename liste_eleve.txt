@@ -1,0 +1,3 @@
+talon	Achille	Achille_talon
+Lagaffe	Gaston	Gaston-Lagaffe
+Luke	Lucky	lucky luke
