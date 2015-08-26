@@ -42,8 +42,8 @@ compte des accents, caractères spéciaux ni des majuscules.
 
 ## Versionning
 
-v3 : Tentative d'amélioration de l'algorithme pour poser des questions en tenant 
+* v3 : Tentative d'amélioration de l'algorithme pour poser des questions en tenant 
     compte du temps : http://en.wikipedia.org/wiki/Spaced_repetition
-v5 : Tentative d'amélioration en 
+* v5 : Tentative d'amélioration en 
     mettant une liste de noms pour les photos
     comme troisième colonne du fichier liste_elèves
