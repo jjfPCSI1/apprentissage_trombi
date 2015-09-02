@@ -114,7 +114,7 @@ class mainWindow(QtGui.QWidget):
         self.Image.setAlignment(QtCore.Qt.AlignCenter)
         self.Image.setStyleSheet("border: 3px;")
         self.Image.setFont(font)
-        im = QtGui.QPixmap("./photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
+        im = QtGui.QPixmap("./Photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
         #on agrandit l'image le plus possible tout en gardant le rapport d'aspect
         im = im.scaled(self.Image.width(),self.Image.height(),QtCore.Qt.KeepAspectRatio)
         self.Image.setPixmap(im)
@@ -203,7 +203,7 @@ class mainWindow(QtGui.QWidget):
         self.TexteCorrection.setText('  Vous avez répondu :  ' + self.nom_propose + '\n La bonne réponse était : ' + self.prenoms[self.nombre_aleatoire].capitalize() + ' ' + self.noms[self.nombre_aleatoire].upper() )
         self.TexteCorrection.show()
         self.TexteCorrection.setAutoFillBackground(True)
-        im = QtGui.QPixmap("./photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
+        im = QtGui.QPixmap("./Photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
         im = im.scaled(self.Image.width(),self.Image.height(),QtCore.Qt.KeepAspectRatio)
         self.Image.setPixmap(im)
         
@@ -218,7 +218,7 @@ class mainWindow(QtGui.QWidget):
         self.TexteCorrection.hide()        
         self.nombre_aleatoire  = self.tire_nb_aleatoire()
         if not(self.pas_de_test_a_faire):
-            im = QtGui.QPixmap("./photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
+            im = QtGui.QPixmap("./Photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
             im = im.scaled(self.Image.width(),self.Image.height(),QtCore.Qt.KeepAspectRatio)
             self.Image.setPixmap(im)
             self.Dialogue.setEnabled(True)
@@ -234,7 +234,7 @@ class mainWindow(QtGui.QWidget):
         self.save_scores()
         self.nombre_aleatoire  = self.tire_nb_aleatoire()
         if not(self.pas_de_test_a_faire):
-            im = QtGui.QPixmap("./photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
+            im = QtGui.QPixmap("./Photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
             im = im.scaled(self.Image.width(),self.Image.height(),QtCore.Qt.KeepAspectRatio)
             self.Image.setPixmap(im)
             self.Dialogue.setEnabled(True)
@@ -442,7 +442,7 @@ class mainWindow(QtGui.QWidget):
         if e.key() == QtCore.Qt.Key_Escape:
             self.Dialogue.setText('')
     def resizeEvent(self,size):
-        im = QtGui.QPixmap("./photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
+        im = QtGui.QPixmap("./Photos/" + self.nom_photos[self.nombre_aleatoire]+".jpg")
         im = im.scaled(self.Image.width(),self.Image.height(),QtCore.Qt.KeepAspectRatio)
         self.Image.setPixmap(im)
         
